@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Alert, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 class Toptext extends Component{
@@ -10,10 +9,7 @@ class Toptext extends Component{
         }
     }
     componentDidMount(){
-        AsyncStorage.setItem('misDatos', this.state.counter)
-        .then(function(){
-        })
-        .catch(e=>console.log(e))
+        
     }
 
     touch(){
@@ -23,7 +19,7 @@ class Toptext extends Component{
     }
 
     componentDidUpdate(){
-        AsyncStorage.setItem('misDatos', String(this.state.counter))      
+        
     }
 
     render(){
